@@ -6,9 +6,9 @@ function limitCalls(func, n) { // 여기에 코드를 작성하세요.
             func();
             num++;
         }
-        if (num===n){
-            return 0;
-        }
+        // if (num===n){
+        //     return 0;
+        // }
     };
 }
 const limitedHello = limitCalls(() => console.log("Hello!"), 2); 
