@@ -13,6 +13,12 @@ function fastFunction(data){
 }
 //try-catch를 사용해서 에러를 처리함.
 
+
+function runTask2(){
+    slowFunction(10).then(data=>{
+        console.log(data);
+    })
+} //async 함수가 아니므로 await를 사용하지 않는다면 then을 사용해 비동기 처리를 해줄 수 밖에 없음
 async function fastFunction(data){
     await delay(1000); //resolve되기를 기다리는 await 키워드! resolve의 인자로 넣어준 값이 return 되는 것 
     const result=data*2;

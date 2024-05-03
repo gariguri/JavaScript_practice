@@ -15,12 +15,17 @@ async function slowFunction(data){
 }
 
 function runTask(){
+    // Promise.all(
+    //     [fastFunction(5), slowFunction(10)]
+    // ).then(([result1, result2])=>{ //반환된 데이터를 풀어서 받음
+    //     console.log('작업종료');
+    //     console.log(result1);
+    //     console.log(result2);
+    // })
     Promise.all(
         [fastFunction(5), slowFunction(10)]
-    ).then(([result1, result2])=>{
-        console.log('작업종료');
-        console.log(result1);
-        console.log(result2);
+    ).then((data)=>{
+        console.log(data); //반환된 배열을 출력
     })
 
 }
